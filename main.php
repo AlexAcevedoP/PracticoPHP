@@ -1,19 +1,17 @@
 <?php
 
-$palabra = array("sol","luna","cielo","estrella","nube","viento","lluvia","rayo","trueno","relampago","tormenta","neblina","niebla","nieve","granizo","hielo","frio","calor","humedad","sequedad","viento fuerte","viento suave");
+$palabra = array("sol", "luna", "cielo", "estrella", "nube", "viento", "lluvia");
 
-$fomr="<form action='analisis.php' method='post'>";
-for ($i=0; $i<count($palabra); $i++){
-    $form.= "La palabra: ".str_shuffle($palabra[$i])." ".
-    "<input type='text' name='palabra".[$i]."'>".
-    "<br>";
+$form = "<form action='analisis.php'>";
+for ($i = 0; $i < count($palabra); $i++) {
+    $form .= "La palabra: " . str_shuffle($palabra[$i]) . " " .
+        "<input type='text' name='palabra$i'>" .
+        "<br>";
 }
-print_r($palabraDesordenada);
 
 $button = "<button type='submit'>Enviar</button>";
-$formCiErre= "</form>";
+$formCierre = "</form>";
 
-echo $form.$button.$formCiErre;
-
+echo $form . $button . $formCierre;
 
 ?>
